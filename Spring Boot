@@ -1,0 +1,19 @@
+In Spring, you can link HTML, CSS, JavaScript, and Java by using the Spring MVC (Model-View-Controller) framework. Here are the general steps to link these technologies in a Spring MVC application:
+
+Create a new Spring Boot project using the Spring Initializer or the Spring Boot CLI. Make sure to include the "web" dependency in your project.
+
+Create a new package in your project called "static" and within it create a "resources" folder. Within the resources folder, you can create subfolders for "css", "js", and "img" to store your CSS, JavaScript and image files respectively.
+
+In your Java code, create a controller class that will handle the requests for your HTML pages. In this class, you can use the @Controller annotation to specify that this class is a controller.
+
+Use the @RequestMapping annotation to map URLs to specific methods in your controller class. For example, you can map the root URL ("/") to a method that returns the HTML for your homepage.
+
+In your HTML pages, you can link to your CSS and JavaScript files by using the appropriate HTML tags, such as <link> and <script>. Make sure to specify the correct path to your files, relative to the resources folder.
+
+You can also use the @Autowired annotation to inject any service you need to access data or any other functionality, in your controller and use it to serve the data to the view.
+
+Finally, you can use the @ResponseBody annotation on the method in your controller class to return the HTML, JSON or XML data to the client.
+
+To use the static content, you can use the spring.mvc.static-path-pattern property in the application.properties file to configure the path for the static resources.
+
+In summary, Spring MVC allows you to separate the logic of your application (Java) from the presentation (HTML, CSS, JavaScript) by using a controller to handle requests and a view to display the results.
